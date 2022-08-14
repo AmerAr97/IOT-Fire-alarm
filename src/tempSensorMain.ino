@@ -22,16 +22,6 @@ const char* WIFI_SSID = "Myhome";      // Put here your Wi-Fi SSID
 const char* WIFI_PASS = "32152799";      // Put here your Wi-Fi password
 Ubidots ubidots(UBIDOTS_TOKEN, UBI_HTTP);
 
-/****************************************
- * Auxiliar Functions
- ****************************************/
-
-// Put here your auxiliar functions
-
-/****************************************
- * Main Functions
- ****************************************/
-
 void setup() {
   Serial.begin(115200);
   ubidots.wifiConnect(WIFI_SSID, WIFI_PASS);
@@ -75,8 +65,6 @@ void loop() {
       Serial.print("temperature: ");
       Serial.print(T,2);
       Serial.print(" deg C, ");
-      
-      
       
     }
     else Serial.println("error retrieving temperature measurement\n");
